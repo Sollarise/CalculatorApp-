@@ -40,7 +40,7 @@ jobs:
         run: |
           cd android
           chmod +x gradlew
-          ./gradlew assembleRelease
+          ./gradlew assembleRelease --warning-mode=none
         env:
           CALCULATOR_STORE_FILE: calculator-keystore.p12
           CALCULATOR_STORE_PASSWORD: ${{ secrets.CALCULATOR_STORE_PASSWORD }}
