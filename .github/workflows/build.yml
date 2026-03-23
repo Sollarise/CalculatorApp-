@@ -39,6 +39,7 @@ jobs:
       - name: Build release APK
         run: |
           cd android
+          chmod +x gradlew
           ./gradlew assembleRelease
         env:
           CALCULATOR_STORE_FILE: calculator-keystore.p12
